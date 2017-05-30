@@ -1,21 +1,31 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Frivillig Registrering</ion-title>
   </ion-navbar>
 </ion-header>
 
+
 <ion-content padding>
  <ion-list>
-
   <ion-item>
-    <ion-label fixed>Username</ion-label>
-    <ion-input type="text" value=""></ion-input>
+    <ion-input  placeholder=" Medlems Nr" type="text" value=""></ion-input>
   </ion-item>
-
   <ion-item>
-    <ion-label fixed>Password</ion-label>
-    <ion-input type="password"></ion-input>
+    <ion-input placeholder=" Antal timer" type="text"></ion-input>
   </ion-item>
-
+  <ion-item>
+    <ion-select placeholder="Vælg laug" [(ngModel)]="gaming">
+      <ion-option value="Laug 1">Laug 1</ion-option>
+      <ion-option value="Laug 2">Laug 2</ion-option>
+      <ion-option value="Laug 3">Laug 3</ion-option>
+      <ion-option value="Laug 4">Laug 4</ion-option>
+      <ion-option value="Laug 5">Laug 5</ion-option>
+      <ion-option value="Laug 6">Laug 6</ion-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+  <ion-datetime placeholder="Vælg dato"  displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+</ion-item>
+<button  ion-button item-left icon-right>Gem<ion-icon name="md-download"></ion-icon></button>
 </ion-list>
 </ion-content>
